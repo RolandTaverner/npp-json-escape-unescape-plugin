@@ -28,6 +28,7 @@ x86/
 [Aa][Rr][Mm]64/
 bld/
 [Bb]in/
+[Bb]in64/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
@@ -398,3 +399,5 @@ FodyWeavers.xsd
 *.sln.iml
 
 3rdparty/jsoncppbuild
+!3rdparty/jsoncppbuild/src/lib_json/jsoncpp_static.vcxproj
+!3rdparty/jsoncppbuild/src/lib_json/jsoncpp_static.vcxproj.filters

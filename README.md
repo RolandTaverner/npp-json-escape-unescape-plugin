@@ -15,14 +15,18 @@ Visual Studio 17 2022
 - Python development
   - Python 3
   
-TODO
+## Get the code
 
 `git clone https://github.com/RolandTaverner/npp-jsonutils-plugin.git`
 
+Open npp-jsonutils-plugin/vs.proj/NppJsonUtilsPlugin.sln
+
+## Update jsoncpp .vcxproj file
 ```
+rm -rf npp-jsonutils-plugin/3rdparty/jsoncppbuild
 mkdir npp-jsonutils-plugin/3rdparty/jsoncppbuild
 cd npp-jsonutils-plugin/3rdparty/jsoncppbuild
 cmake ..\jsoncpp -G "Visual Studio 17 2022"
 ```
+Add Win32 platform.
 
-Open npp-jsonutils-plugin/vs.proj/NppJsonUtilsPlugin.sln

@@ -18,6 +18,8 @@
 #include "plugin/PluginDefinition.h"
 #include "npp/menuCmdID.h"
 
+#include "json/json.h"
+
 //
 // The plugin data that Notepad++ needs
 //
@@ -95,6 +97,8 @@ bool setCommand(size_t index, TCHAR *cmdName, PFUNCPLUGINCMD pFunc, ShortcutKey 
 //----------------------------------------------//
 void escapeJson()
 {
+    Json::Reader reader;
+
     // Open a new document
     ::SendMessage(nppData._nppHandle, NPPM_MENUCOMMAND, 0, IDM_FILE_NEW);
 
