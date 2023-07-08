@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\src\DockingFeature\StaticDialog.cpp">
+      <Filter>DockingFeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\plugin\NppJsonUtilsPlugin.cpp">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\plugin\PluginDefinition.cpp">
+      <Filter>plugin</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\resource.h" />
+    <ClInclude Include="..\src\DockingFeature\Docking.h">
+      <Filter>DockingFeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DockingFeature\DockingDlgInterface.h">
+      <Filter>DockingFeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DockingFeature\dockingResource.h">
+      <Filter>DockingFeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DockingFeature\resource.h">
+      <Filter>DockingFeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\plugin\PluginDefinition.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\plugin\PluginInterface.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DockingFeature\StaticDialog.h">
+      <Filter>DockingFeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scintilla\Sci_Position.h">
+      <Filter>scintilla</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scintilla\Scintilla.h">
+      <Filter>scintilla</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\npp\menuCmdID.h">
+      <Filter>npp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\npp\Notepad_plus_msgs.h">
+      <Filter>npp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DockingFeature\Window.h">
+      <Filter>DockingFeature</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\NppJsonUtilsPlugin.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="DockingFeature">
+      <UniqueIdentifier>{b0414c4d-2f1f-402a-8808-8fea3d7b3920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plugin">
+      <UniqueIdentifier>{b8086c32-75b4-4ac8-96e9-5339d7005a80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scintilla">
+      <UniqueIdentifier>{b545bcc9-1058-482d-9f0e-f3523ebcedcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="npp">
+      <UniqueIdentifier>{47e69b9f-7c56-4ac1-88ee-b6692b3017c5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

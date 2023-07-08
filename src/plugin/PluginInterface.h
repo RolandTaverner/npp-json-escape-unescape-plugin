@@ -17,8 +17,8 @@
 
 #pragma once
 
-#include "Scintilla.h"
-#include "Notepad_plus_msgs.h"
+#include "scintilla/Scintilla.h"
+#include "npp/Notepad_plus_msgs.h"
 
 const int nbChar = 64;
 

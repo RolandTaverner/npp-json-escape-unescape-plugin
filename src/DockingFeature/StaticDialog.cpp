@@ -17,7 +17,8 @@
 #include <stdio.h>
 #include <string>
 #include <windows.h>
-#include "StaticDialog.h"
+
+#include "DockingFeature/StaticDialog.h"
 
 StaticDialog::~StaticDialog()
 {

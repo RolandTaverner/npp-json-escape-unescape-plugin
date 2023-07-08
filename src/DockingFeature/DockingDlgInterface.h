@@ -17,13 +17,13 @@
 
 #pragma once
 
-#include "dockingResource.h"
-#include "Docking.h"
+#include "DockingFeature/dockingResource.h"
+#include "DockingFeature/Docking.h"
 
 #include <assert.h>
 #include <shlwapi.h>
 #include <string>
-#include "StaticDialog.h"
+#include "DockingFeature/StaticDialog.h"
 
 
 
