@@ -20,6 +20,8 @@
 
 #include "json/json.h"
 
+#include "scintilla/ScintillaAdapter.h"
+
 //
 // The plugin data that Notepad++ needs
 //
@@ -97,36 +99,32 @@ bool setCommand(size_t index, TCHAR *cmdName, PFUNCPLUGINCMD pFunc, ShortcutKey 
 //----------------------------------------------//
 void escapeJson()
 {
-    Json::Reader reader;
-
-    // Open a new document
-    ::SendMessage(nppData._nppHandle, NPPM_MENUCOMMAND, 0, IDM_FILE_NEW);
-
-    // Get the current scintilla
-    int which = -1;
-    ::SendMessage(nppData._nppHandle, NPPM_GETCURRENTSCINTILLA, 0, (LPARAM)&which);
-    if (which == -1)
+    // TODO: handle codepages
+    ScintillaAdapter scintillaAdapter(nppData);
+    auto selectedText = scintillaAdapter.GetSelectedText();
+    if (selectedText.empty()) {
         return;
-    HWND curScintilla = (which == 0)?nppData._scintillaMainHandle:nppData._scintillaSecondHandle;
+    }
 
-    // Say hello now :
-    // Scintilla control has no Unicode mode, so we use (char *) here
-    ::SendMessage(curScintilla, SCI_SETTEXT, 0, (LPARAM)"Hello, Notepad++!");
+    Json::Value value(selectedText);
+
+    Json::StreamWriterBuilder builder;
+    builder["emitUTF8"] = true;
+    builder["indentation"] = ""; // If you want whitespace-less output
+    const std::string output = Json::writeString(builder, value);
+
+    scintillaAdapter.ReplaceSelectedText(output);
 }
 
 void unescapeJson()
 {
-    // Open a new document
-    ::SendMessage(nppData._nppHandle, NPPM_MENUCOMMAND, 0, IDM_FILE_NEW);
-
-    // Get the current scintilla
-    int which = -1;
-    ::SendMessage(nppData._nppHandle, NPPM_GETCURRENTSCINTILLA, 0, (LPARAM)&which);
-    if (which == -1)
+    ScintillaAdapter scintillaAdapter(nppData);
+    auto selectedText = scintillaAdapter.GetSelectedText();
+    if (selectedText.empty()) {
         return;
-    HWND curScintilla = (which == 0) ? nppData._scintillaMainHandle : nppData._scintillaSecondHandle;
+    }
 
     // Say hello now :
     // Scintilla control has no Unicode mode, so we use (char *) here
-    ::SendMessage(curScintilla, SCI_SETTEXT, 0, (LPARAM)"Hello, Notepad++!");
+    scintillaAdapter.SendMessage(SCI_SETTEXT, 0, (LPARAM)"Hello, Notepad++!");
 }

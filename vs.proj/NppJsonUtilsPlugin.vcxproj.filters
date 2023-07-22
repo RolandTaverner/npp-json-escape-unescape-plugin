@@ -10,6 +10,9 @@
     <ClCompile Include="..\src\plugin\PluginDefinition.cpp">
       <Filter>plugin</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\scintilla\ScintillaAdapter.cpp">
+      <Filter>scintilla</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\resource.h" />
@@ -48,6 +51,9 @@
     </ClInclude>
     <ClInclude Include="..\src\DockingFeature\Window.h">
       <Filter>DockingFeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\scintilla\ScintillaAdapter.h">
+      <Filter>scintilla</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

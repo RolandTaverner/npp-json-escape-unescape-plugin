@@ -31,12 +31,14 @@
     <ClInclude Include="..\src\plugin\PluginInterface.h" />
     <ClInclude Include="..\src\resource.h" />
     <ClInclude Include="..\src\scintilla\Scintilla.h" />
+    <ClInclude Include="..\src\scintilla\ScintillaAdapter.h" />
     <ClInclude Include="..\src\scintilla\Sci_Position.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\DockingFeature\StaticDialog.cpp" />
     <ClCompile Include="..\src\plugin\NppJsonUtilsPlugin.cpp" />
     <ClCompile Include="..\src\plugin\PluginDefinition.cpp" />
+    <ClCompile Include="..\src\scintilla\ScintillaAdapter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\src\NppJsonUtilsPlugin.rc" />
