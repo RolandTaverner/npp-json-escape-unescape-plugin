@@ -13,6 +13,9 @@
     <ClCompile Include="..\src\scintilla\ScintillaAdapter.cpp">
       <Filter>scintilla</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\jsonutils\JsonUtils.cpp">
+      <Filter>jsonutils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\resource.h" />
@@ -55,6 +58,9 @@
     <ClInclude Include="..\src\scintilla\ScintillaAdapter.h">
       <Filter>scintilla</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\jsonutils\JsonUtils.h">
+      <Filter>jsonutils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\src\NppJsonUtilsPlugin.rc" />
@@ -71,6 +77,9 @@
     </Filter>
     <Filter Include="npp">
       <UniqueIdentifier>{47e69b9f-7c56-4ac1-88ee-b6692b3017c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jsonutils">
+      <UniqueIdentifier>{4b2042c5-9de7-4a49-aba9-ec9b29c13899}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

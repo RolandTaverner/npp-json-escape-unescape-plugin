@@ -25,6 +25,7 @@
     <ClInclude Include="..\src\DockingFeature\resource.h" />
     <ClInclude Include="..\src\DockingFeature\StaticDialog.h" />
     <ClInclude Include="..\src\DockingFeature\Window.h" />
+    <ClInclude Include="..\src\jsonutils\JsonUtils.h" />
     <ClInclude Include="..\src\npp\menuCmdID.h" />
     <ClInclude Include="..\src\npp\Notepad_plus_msgs.h" />
     <ClInclude Include="..\src\plugin\PluginDefinition.h" />
@@ -36,6 +37,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\DockingFeature\StaticDialog.cpp" />
+    <ClCompile Include="..\src\jsonutils\JsonUtils.cpp" />
     <ClCompile Include="..\src\plugin\NppJsonUtilsPlugin.cpp" />
     <ClCompile Include="..\src\plugin\PluginDefinition.cpp" />
     <ClCompile Include="..\src\scintilla\ScintillaAdapter.cpp" />

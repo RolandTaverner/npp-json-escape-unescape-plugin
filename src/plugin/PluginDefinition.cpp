@@ -17,10 +17,8 @@
 
 #include "plugin/PluginDefinition.h"
 #include "npp/menuCmdID.h"
-
-#include "json/json.h"
-
 #include "scintilla/ScintillaAdapter.h"
+#include "jsonutils/JsonUtils.h"
 
 //
 // The plugin data that Notepad++ needs
@@ -106,25 +104,26 @@ void escapeJson()
         return;
     }
 
-    Json::Value value(selectedText);
+    JsonUtils jsu;
+    const std::string escaped = jsu.escapeJson(selectedText);
 
-    Json::StreamWriterBuilder builder;
-    builder["emitUTF8"] = true;
-    builder["indentation"] = ""; // If you want whitespace-less output
-    const std::string output = Json::writeString(builder, value);
-
-    scintillaAdapter.ReplaceSelectedText(output);
+    scintillaAdapter.ReplaceSelectedText(escaped);
 }
 
 void unescapeJson()
 {
+    // TODO: handle codepages
     ScintillaAdapter scintillaAdapter(nppData);
     auto selectedText = scintillaAdapter.GetSelectedText();
     if (selectedText.empty()) {
         return;
     }
 
-    // Say hello now :
-    // Scintilla control has no Unicode mode, so we use (char *) here
-    scintillaAdapter.SendMessage(SCI_SETTEXT, 0, (LPARAM)"Hello, Notepad++!");
+    JsonUtils jsu;
+    const std::string unescaped = jsu.unescapeJson(selectedText);
+    if (unescaped.empty()) {
+        return;
+    }
+
+    scintillaAdapter.ReplaceSelectedText(unescaped);
 }
