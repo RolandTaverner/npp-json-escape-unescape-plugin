@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by NppPluginDemo.rc
+// Used by NppJsonUtilsPlugin.rc
 //
 #define SW_HIDE                         0
 #define HIDE_WINDOW                     0

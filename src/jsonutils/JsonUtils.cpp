@@ -46,3 +46,9 @@ std::string JsonUtils::unescapeJson(const std::string& str) const
 
     return value.asString();
 }
+
+std::string JsonUtils::recursiveUnescapeJson(const std::string& str) const
+{
+    // TODO: implement
+    return str;
+}

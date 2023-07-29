@@ -62,6 +62,8 @@ void commandMenuInit()
     //            );
     setCommand(0, TEXT("Escape Json"), escapeJson, NULL, false);
     setCommand(1, TEXT("Unescape Json"), unescapeJson, NULL, false);
+    setCommand(2, TEXT("Recusive unescape Json"), recursiveUnescapeJson, NULL, false);
+
 }
 
 //
@@ -127,3 +129,22 @@ void unescapeJson()
 
     scintillaAdapter.ReplaceSelectedText(unescaped);
 }
+
+void recursiveUnescapeJson()
+{
+    // TODO: handle codepages
+    ScintillaAdapter scintillaAdapter(nppData);
+    auto selectedText = scintillaAdapter.GetSelectedText();
+    if (selectedText.empty()) {
+        return;
+    }
+
+    JsonUtils jsu;
+    const std::string unescaped = jsu.recursiveUnescapeJson(selectedText);
+    if (unescaped.empty()) {
+        return;
+    }
+
+    scintillaAdapter.ReplaceSelectedText(unescaped);
+}
+

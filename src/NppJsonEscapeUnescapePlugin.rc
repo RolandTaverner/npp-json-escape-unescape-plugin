@@ -31,12 +31,12 @@ BEGIN
         BLOCK "040904b0"
         BEGIN
             VALUE "CompanyName", "Alexander Verbitsky averbitsky@vivaldi.net"
-            VALUE "FileDescription", "Notepad++ Json utils plugin"
+            VALUE "FileDescription", "Notepad++ Json escape/unescape plugin"
             VALUE "FileVersion", "1.0.0.0"
-            VALUE "InternalName", "NppPluginTemplate.dll"
+            VALUE "InternalName", "NppJsonEscapeUnescapePlugin.dll"
             VALUE "LegalCopyright", "Copyright 2023 by Alexander Verbitsky"
-            VALUE "OriginalFilename", "NppJsonUtilsPlugin.dll"
-            VALUE "ProductName", "NppJsonUtilsPlugin"
+            VALUE "OriginalFilename", "NppJsonEscapeUnescapePlugin.dll"
+            VALUE "ProductName", "NppJsonEscapeUnescapePlugin"
             VALUE "ProductVersion", "1.0.0.0"
         END
     END

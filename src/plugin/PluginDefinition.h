@@ -19,7 +19,7 @@
 #define PLUGINDEFINITION_H
 
 //
-// All difinitions of plugin interface
+// All definitions of plugin interface
 //
 #include "plugin/PluginInterface.h"
 
@@ -28,7 +28,7 @@
 //-------------------------------------//
 // Here define your plugin name
 //
-const TCHAR NPP_PLUGIN_NAME[] = TEXT("Notepad++ Json utils plugin");
+const TCHAR NPP_PLUGIN_NAME[] = TEXT("Json escape/unescape");
 
 //-----------------------------------------------//
 //-- STEP 2. DEFINE YOUR PLUGIN COMMAND NUMBER --//
@@ -36,7 +36,7 @@ const TCHAR NPP_PLUGIN_NAME[] = TEXT("Notepad++ Json utils plugin");
 //
 // Here define the number of your plugin commands
 //
-const int nbFunc = 2;
+const int nbFunc = 3;
 
 
 //
@@ -72,5 +72,6 @@ bool setCommand(size_t index, TCHAR *cmdName, PFUNCPLUGINCMD pFunc, ShortcutKey 
 //
 void escapeJson();
 void unescapeJson();
+void recursiveUnescapeJson();
 
 #endif //PLUGINDEFINITION_H

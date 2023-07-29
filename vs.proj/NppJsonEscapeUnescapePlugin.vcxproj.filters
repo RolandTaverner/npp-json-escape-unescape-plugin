@@ -4,7 +4,7 @@
     <ClCompile Include="..\src\DockingFeature\StaticDialog.cpp">
       <Filter>DockingFeature</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\plugin\NppJsonUtilsPlugin.cpp">
+    <ClCompile Include="..\src\plugin\NppJsonEscapeUnescapePlugin.cpp">
       <Filter>plugin</Filter>
     </ClCompile>
     <ClCompile Include="..\src\plugin\PluginDefinition.cpp">
@@ -63,7 +63,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\src\NppJsonUtilsPlugin.rc" />
+    <ResourceCompile Include="..\src\NppJsonEscapeUnescapePlugin.rc" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="DockingFeature">

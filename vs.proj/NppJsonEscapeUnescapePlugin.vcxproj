@@ -38,12 +38,12 @@
   <ItemGroup>
     <ClCompile Include="..\src\DockingFeature\StaticDialog.cpp" />
     <ClCompile Include="..\src\jsonutils\JsonUtils.cpp" />
-    <ClCompile Include="..\src\plugin\NppJsonUtilsPlugin.cpp" />
+    <ClCompile Include="..\src\plugin\NppJsonEscapeUnescapePlugin.cpp" />
     <ClCompile Include="..\src\plugin\PluginDefinition.cpp" />
     <ClCompile Include="..\src\scintilla\ScintillaAdapter.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\src\NppJsonUtilsPlugin.rc" />
+    <ResourceCompile Include="..\src\NppJsonEscapeUnescapePlugin.rc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\3rdparty\jsoncppbuild\src\lib_json\jsoncpp_static.vcxproj">
@@ -53,9 +53,9 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9D04DBD5-E12E-44E0-A683-6F43F21D533B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>NppJsonUtilsPlugin</RootNamespace>
+    <RootNamespace>NppJsonEscapeUnescapePlugin</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>NppJsonUtilsPlugin</ProjectName>
+    <ProjectName>NppJsonEscapeUnescapePlugin</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
