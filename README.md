@@ -2,6 +2,28 @@
 
 This is Notepad++ plugin for escaping/unescaping JSON strings.
 
+# Installation
+
+TL;DR [Official plugin installation HOWTO](https://npp-user-manual.org/docs/plugins/)
+
+Open [Releases page](https://github.com/RolandTaverner/npp-json-escape-unescape-plugin/releases) to see all releases.
+
+## 32-bit (x86) Notepad++
+
+Download the latest 32-bit version (`Release_x86.zip`).
+
+Unzip the `Release_x86.zip` to `%PROGRAMFILES(x86)%\Notepad++\plugins\NppJsonEscapeUnescapePlugin\NppJsonEscapeUnescapePlugin.dll`.
+
+Usually `%PROGRAMFILES(x86)%` = `C:\Program Files (x86)`.
+
+## 64-bit (x86-64) Notepad++
+
+Download the latest 64-bit version (`Release_x64.zip`).
+
+Unzip the `Release_x64.zip` to `%PROGRAMFILES%\Notepad++\plugins\NppJsonEscapeUnescapePlugin\NppJsonEscapeUnescapePlugin.dll`.
+
+Usually `%PROGRAMFILES%` = `C:\Program Files`.
+
 # Functions
 
 ## Escape
@@ -70,13 +92,13 @@ Visual Studio 17 2022
 
 `git clone https://github.com/RolandTaverner/npp-json-escape-unescape-plugin.git`
 
-Open npp-jsonutils-plugin/vs.proj/NppJsonEscapeUnescapePlugin.sln
+Open `npp-json-escape-unescape-plugin/vs.proj/NppJsonEscapeUnescapePlugin.sln`.
 
 ## Update jsoncpp .vcxproj file (note for myself)
 ```
-rm -rf npp-jsonutils-plugin/3rdparty/jsoncppbuild
-mkdir npp-jsonutils-plugin/3rdparty/jsoncppbuild
-cd npp-jsonutils-plugin/3rdparty/jsoncppbuild
+rm -rf npp-json-escape-unescape-plugin/3rdparty/jsoncppbuild
+mkdir npp-json-escape-unescape-plugin/3rdparty/jsoncppbuild
+cd npp-json-escape-unescape-plugin/3rdparty/jsoncppbuild
 cmake ..\jsoncpp -G "Visual Studio 17 2022"
 ```
 Add Win32 platform.
