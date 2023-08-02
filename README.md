@@ -1,6 +1,6 @@
 # About
 
-This (will be) a plugin for unescaping JSON strings with (optionally) recursive unescape.
+This is Notepad++ plugin for escaping/unescaping JSON strings.
 
 # Functions
 
@@ -16,7 +16,7 @@ And so on.
 
 ## Unescape
 
-Plain simple JSON unescape, but it can unescape both `some string` and `"somee string"`.
+Plain simple JSON unescape, but it can unescape both `some string` and `"some string"`.
 
 Input MUST be valid JSON escaped string.
 
@@ -30,8 +30,25 @@ And so on.
 
 ## Recursive unescape
 
-TODO
+This is a bit tricky.
 
+If input is `"some string"` or `some string` it behaves as simple unescape (see above).
+
+If input is valid JSON (like `{"a": 1}`) or valid escaped JSON (like `"{\"a\": \"string\"}"` with or without outer quotes), it does:
+- Parse input to JSON
+- Recursively traverse all nodes
+- For string nodes try parse string content as JSON and replace string value with object value
+
+Examples:
+`"{\"a\": \"string\"}"` => `{"a":"string"}`
+
+`{\"a\": \"string\"}` => `{"a":"string"}` (same as above but without outer quotes)
+
+`"{\"a\":1,\"b\":\"{\\\"c\\\": 1}\"}"` => `{"a":1,"b":{"c":1}}`
+
+`{"a": "{\"b\":\"{\\\"c\\\": \\\"string\\\"}\"}"}` => `{"a":{"b":{"c":"string"}}}`
+
+And so on.
 
 # How to build
 
