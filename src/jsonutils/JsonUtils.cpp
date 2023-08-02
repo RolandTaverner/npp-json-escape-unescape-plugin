@@ -56,7 +56,7 @@ std::string JsonUtils::recursiveUnescapeJson(const std::string& str) const
 	}
 
 	Json::Value value;
-
+	bool unescapeDone = false;
 	// Try parse as is
 	value = parse(str, true);
 	if (value.isNull()) {
@@ -66,13 +66,14 @@ std::string JsonUtils::recursiveUnescapeJson(const std::string& str) const
 		if (value.isString()) {
 			return unescapedStr;
 		}
+		unescapeDone = true;
 	}
 
 	const auto unescaped = doRecursiveUnescape(value);
 	if (unescaped.first.isNull()) {
 		return emptyString;
 	}
-	if (!unescaped.second) {
+	if (!unescaped.second && !unescapeDone) {
 		return emptyString;
 	}
 
