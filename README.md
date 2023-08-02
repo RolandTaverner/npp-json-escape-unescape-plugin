@@ -8,6 +8,8 @@ This is Notepad++ plugin for escaping/unescaping JSON strings.
 
 Plain simple JSON escape.
 
+### Examples
+
 `sample "string"\` => `"sample \"string\"\\"`
 
 `{"a": "test"}` => `"{\"a\": \"test\"}"`
@@ -19,6 +21,8 @@ And so on.
 Plain simple JSON unescape, but it can unescape both `some string` and `"some string"`.
 
 Input MUST be valid JSON escaped string.
+
+### Examples
 
 `"test \"string\"\\n"` => `test "string"\n`
 
@@ -39,7 +43,8 @@ If input is valid JSON (like `{"a": 1}`) or valid escaped JSON (like `"{\"a\": \
 - Recursively traverse all nodes
 - For string nodes try parse string content as JSON and replace string value with object value
 
-Examples:
+### Examples
+
 `"{\"a\": \"string\"}"` => `{"a":"string"}`
 
 `{\"a\": \"string\"}` => `{"a":"string"}` (same as above but without outer quotes)
