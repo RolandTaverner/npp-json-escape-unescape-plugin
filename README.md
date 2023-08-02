@@ -103,3 +103,20 @@ cmake ..\jsoncpp -G "Visual Studio 17 2022"
 ```
 Add Win32 platform.
 
+# Thanks to
+
+## Don Ho
+
+The author of the famous lovely [Notepad++](https://notepad-plus-plus.org).
+
+## JsonCpp community
+
+Authors and maintainers of [JsonCpp](https://github.com/open-source-parsers/jsoncpp) library.
+
+## Rajendra Singh
+
+The author of [URL plugin](https://github.com/SinghRajenM/nppURLPlugin) which I used as a reference.
+
+## molsonkiko
+
+The author of the [JsonTools plugin](https://github.com/molsonkiko/JsonToolsNppPlugin) which I use every day.
