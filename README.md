@@ -79,6 +79,22 @@ And so on.
 
 # How to build
 
+## Do a security audit
+
+Since this is some random repo from random guy do not trust it.
+
+### Check git externals
+
+`.gitmodules` should contain reference to official JsonCpp repo ( https://github.com/open-source-parsers/jsoncpp.git ).
+
+### Check *.bat files
+
+`build_jsoncpp_x32.bat` and `build_jsoncpp_x64.bat` should contain only build-related commands.
+
+### Read the code
+
+Well, just do it. Its tiny. There should be no suspicious things like network operations, process creation, obfuscated stuff and so on.
+
 ## Prerequisites
 
 Visual Studio 17 2022
@@ -92,16 +108,33 @@ Visual Studio 17 2022
 
 `git clone https://github.com/RolandTaverner/npp-json-escape-unescape-plugin.git`
 
-Open `npp-json-escape-unescape-plugin/vs.proj/NppJsonEscapeUnescapePlugin.sln`.
+## Build JsonCpp's static libraries
 
-## Update jsoncpp .vcxproj file (note for myself)
-```
-rm -rf npp-json-escape-unescape-plugin/3rdparty/jsoncppbuild
-mkdir npp-json-escape-unescape-plugin/3rdparty/jsoncppbuild
-cd npp-json-escape-unescape-plugin/3rdparty/jsoncppbuild
-cmake ..\jsoncpp -G "Visual Studio 17 2022"
-```
-Add Win32 platform.
+You can build 32 bit, 64 bit library versions or both if you need them all.
+
+If you installed Visual Studio to non-standard location change path to `vcvarsall.bat` at the beginning of `build_jsoncpp_x32.bat` and `build_jsoncpp_x64.bat`. Also you can open VS 2022 x64 tools console and run commands manually without explicit call to `vcvarsall.bat`.
+
+### 32 bit
+
+Run `build_jsoncpp_x32.bat`. 
+
+After successful build there should be files located at
+- `npp-json-escape-unescape-plugin\3rdparty\jsoncppbuild\build_Win32\lib\Debug\jsoncpp.lib`
+- `npp-json-escape-unescape-plugin\3rdparty\jsoncppbuild\build_Win32\lib\Release\jsoncpp.lib`
+
+### 64 bit
+
+Run `build_jsoncpp_x64.bat`.
+
+After successful build there should be files located at
+- `npp-json-escape-unescape-plugin\3rdparty\jsoncppbuild\build_x64\lib\Debug\jsoncpp.lib`
+- `npp-json-escape-unescape-plugin\3rdparty\jsoncppbuild\build_x64\lib\Release\jsoncpp.lib`
+
+## Open solution
+
+Solution file located at `npp-json-escape-unescape-plugin/vs.proj/NppJsonEscapeUnescapePlugin.sln`
+
+## Enjoy
 
 # Thanks to
 
