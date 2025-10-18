@@ -102,7 +102,7 @@ There should be no suspicious elements such as network operations, process creat
 
 Visual Studio 17 2022
 - Desktop development with C++
-  - Windows SDK
+  - WIndows SDK
   - C++ CMake tools for windows
 - Python development
   - Python 3
