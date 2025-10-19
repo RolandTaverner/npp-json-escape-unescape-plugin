@@ -404,3 +404,5 @@ FodyWeavers.xsd
 3rdparty/jsoncppbuild
 !3rdparty/jsoncppbuild/src/lib_json/jsoncpp_static.vcxproj
 !3rdparty/jsoncppbuild/src/lib_json/jsoncpp_static.vcxproj.filters
+
+*.bak
